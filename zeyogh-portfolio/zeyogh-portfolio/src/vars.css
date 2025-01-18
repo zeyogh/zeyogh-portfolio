@@ -1,0 +1,11 @@
+:root {
+    /* Colors */
+    --color-text: #000;
+    --color-primary: #d8fdf3;
+    --color-secondary: #86b6ae;
+    --color-dark: #113455;
+    --color-background: #dfdef2;
+
+    /* Fonts */
+    --font-space-mono: "Space Mono";
+}
