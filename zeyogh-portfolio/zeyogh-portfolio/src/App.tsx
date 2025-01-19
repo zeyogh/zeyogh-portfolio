@@ -1,3 +1,5 @@
+import styles from './App.module.css'
+import Button from './components/button'
 import * as THREE from 'three'
 import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
@@ -28,11 +30,22 @@ function Box(props: JSX.IntrinsicElements['mesh']) {
 
 export default function App() {
   return (
-    <Canvas>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} intensity={1} />
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
-    </Canvas>
+    <>
+    <Button 
+      border="none"
+      color="pink"
+      height = "200px"
+      onClick={() => console.log("You clicked on the pink circle!")}
+      radius = "50%"
+      width = "200px"
+      children = "I'm a pink circle!"
+    />
+      <Canvas>
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[5, 5, 5]} intensity={1} />
+        <Box position={[-1.2, 0, 0]} />
+        <Box position={[1.2, 0, 0]} />
+      </Canvas>
+    </>
   )
 }
